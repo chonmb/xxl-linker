@@ -1,0 +1,11 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- 原始菱形图标 -->
+    <path d="M13.5 7.13397C14.1667 7.51888 14.1667 8.48112 13.5 8.86602L4.5 14.0622C3.83333 14.4471 3 13.966 3 13.1962L3 2.80385C3 2.03405 3.83333 1.55292 4.5 1.93782L13.5 7.13397Z" fill="#F2FCF3" stroke="#208A3C"/>
+
+    <!-- Spring 小叶子脚注 -->
+    <g id="letter-b-badge" transform="translate(10, 10) scale(0.4)">
+        <rect x="1.5" y="2.5" width="13" height="11" rx="1.5" fill="#EBECF0" stroke="#6C707E"/>
+        <path d="M4 6L6 8L4 10" stroke="#6C707E" stroke-width="1.2"/>
+        <path d="M7.5 10.5H11.5" stroke="#6C707E" stroke-width="1.2"/>
+    </g>
+</svg>

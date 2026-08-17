@@ -1,0 +1,44 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.chonmb.xxl.link</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-name -->
+    <name>Xxl Linker</name>
+
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor url="https://www.epl.com">XxlLinkPlugin</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-description -->
+    <description>A linker make coding easily between your project and job schedule center.</description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
+    <depends>com.intellij.modules.java</depends>
+    <depends>com.intellij.modules.lang</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+        <codeInsight.lineMarkerProvider
+                implementationClass="com.chonmb.xxl.link.fragment.line.XxlFunctionLineMarkerProvider" language="JAVA"/>
+        <codeInsight.lineMarkerProvider
+                implementationClass="com.chonmb.xxl.link.fragment.line.XxlShellLineMarkerProvider" language="Shell Script"/>
+        <notificationGroup displayType="BALLOON" id="xxl.notification"/>
+    </extensions>
+    <actions>
+        <action id="xxl.linker.session.config"
+                class="com.chonmb.xxl.link.fragment.action.XxlSessionConfigAction"
+                text="xxl会话配置"
+                description="config xxl link">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
+
+
+</idea-plugin>
